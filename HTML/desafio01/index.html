@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Vida</title>
+</head>
+<body>
+  <h1>Jogo da Vida</h1>
+  <hr>
+  <header>
+    <a href="#Regras">Regras</a>&nbsp
+    <a href="#Origem">Origem</a>&nbsp
+    <a href="#Descricao">Descrição</a>&nbsp
+    <a href="#Jogo">O Jogo</a>&nbsp
+    <a href="#Ex">Exemplos de Imagem</a>
+  </header><hr>
+  <main><hr>
+    <div id="Regras">
+      <h2>Regras</h2>
+      <p>
+        O jogo da vida se passa em um arranjo bidimensional infinito de células que podem estar em um de dois estados, vivo ou morto. Cada célula interage com suas oito vizinhas, as células adjacentes horizontal, vertical e diagonalmente. O jogo evolui em unidades de tempo discretas chamadas de gerações.[2] A cada nova geração, o estado do jogo é atualizado pela aplicação das seguintes regras:
+      <ol>
+        <li>Toda célula morta com exatamente três vizinhos vivos torna-se viva (nascimento).</li>
+        <li>Toda célula viva com menos de dois vizinhos vivos morre por isolamento</li>
+        <li>Toda célula viva com mais de três vizinhos vivos morre por superpopulação.</li>
+        <li>Toda célula viva com dois ou três vizinhos vivos permanece viva</li>
+      </ol>
+    </p>
+    <p>
+      As regras são aplicadas simultaneamente em todas as células para chegar ao estado da próxima geração
+    </p>
+    <hr>
+    </div>
+    <div id="Origem">
+      <h2>Origem</h2>
+      <p>
+        Um dos problemas matemáticos mais famosos dos anos 40, do século XX, era o de achar uma máquina capaz de construir cópias de si mesma, que teve uma solução baseada em um autômato celular extremamente engenhoso e complicado inventado pelo renomado matemático John von Neumann. Conway inventou o Jogo da Vida (ou Game of Life) ao utilizar suas descobertas anteriores relacionadas com o problema de encontrar um grupo simétrico de esferas em 24 dimensões, proposto por John Leech para simplificar a solução de von Neumann.
+      </p>
+      <p>
+        O jogo fez sua primeira aparição na edição de Outubro de 1970 da Scientific American, na coluna de jogos matemáticos de Martin Gardner. De um ponto de vista teórico, ele é interessante, pois tem o poder de uma máquina de Turing universal: tudo pode ser computado através de algoritmos no Jogo da Vida de Conway.[5][6] Também era dito desde 1970 que foi destinado mais tempo de computação ao Jogo da Vida do que a qualquer outra atividade. Gardner escreveu:
+        <br>
+        <i>
+          "O jogo fez Conway famoso instantaneamente, mas ele também abriu um novo campo na pesquisa matemática, o campo dos autômatos celulares... Por causa das analogias de Life com o aumento, redução e alteração de uma sociedade de organismos vivos, isto pertence a uma classe crescente que é chamada "jogos de simulação" - jogos que recriam processos do mundo-real."
+        </i>
+        <p>
+          Desde sua publicação, ele tem atraído muito interesse devido aos caminhos surpreendentes que pode tomar. Life é um exemplo de auto-organização. Ele é interessante para biólogos, matemáticos, estatísticos, economistas, filósofos e artistas por permitir a observação do modo como imagens complexas podem surgir de implementações de regras muito simples.
+        </p>
+      </p>
+      <p>
+        O Jogo da Vida tem um número de imagens reconhecidas que emergem de posições iniciais particulares. Antes da publicação, muitas imagens interessantes já haviam sido descobertas, incluindo o sempre envolvente R-pentomino (mais conhecido como "F-pentomino" fora do jogo), o auto propulsionado "glider", e várias "guns" (armas) que geravam um fluxo sem fim de novas imagens, todas aumentando o interesse no jogo. Sua popularidade foi ajudada pelo fato de ele ter vindo justo no momento em que uma nova geração de minicomputadores de baixo custo estavam sendo disponibilizados no mercado, significando que o jogo poderia ser rodado por horas nessa máquinas que não eram utilizadas de noite. Isto escondeu a popularidade posterior dos fractais gerados por computador. Para muitos aficcionados, Life era simplesmente um desafio de programação, um método divertido de gastar os ciclos da CPU. Para alguns, no entanto, Life tinha conotações mais filosóficas. Ele desenvolveu um culto através da década de 1970 e no meio da década de 1980; os desenvolvimentos atuais foram tão longe a ponto de criar emulações teóricas de sistemas de computadores com as regras de um tabuleiro de Life
+      </p>
+      <hr>
+    </div>
+    <div id="Descricao">
+      <h2>Descrição</h2>
+      <p>Este "jogo" é na realidade um jogo sem jogador, o que quer dizer que sua evolução é determinada pelo seu estado inicial, não necessitando de nenhuma entrada de jogadores humanos. Ele é jogado em um conjunto de células quadradas que seguem ao infinito em todas as direções. Cada célula tem oito "vizinhos", que são as células adjacentes, incluindo as diagonais. Cada célula pode estar em dois estados: "viva" ou "morta". (Também são usados os termos "ligado" e "desligado".) O estado do tabuleiro evolui e se modifica em pequenas passagens de tempo. Os estados de todas as células em um instante são considerados para calcular o estado de todas as células no instante seguinte. Todas as células são atualizadas simultaneamente. As transições dependem apenas do número de vizinhos vivos (ver as regras acima).</p>
+      <hr>
+      <h2 id="Jogo">O Jogo</h2>
+      <p>A ideia básica do "jogo" é começar com uma configuração simples de células vivas (organismos) que são colocadas em um tabuleiro 2D de vários métodos. Isto constitui a primeira geração. As "leis genéticas" de Conway para nascimentos, mortes e sobrevivência (as quatro regras acima) são então aplicadas e a nova geração é então colocada de acordo. Geração a geração os "jogador(es)" observam as várias imagens que surgem.</p>
+      <h3>A vida sempre segue</h3>
+      <p>De uma imagem inicial de células vivas no tabuleiro, percebe-se que, conforme passam as gerações, a população anda constantemente de modo não usual, algumas vezes belo e quase sempre inesperado, porém muda. Em muito poucos casos a sociedade eventualmente morre (todas as células se tornam células mortas), apesar de que isso pode não acontecer até que ocorram uma série de novas gerações. A maioria das imagens iniciais chegam a figuras estáveis - Conway chama-as de "vida parada" - que não podem mudar ou imagens que oscilam para sempre. Imagens sem simetria inicial tendem a se tornar simétricas. Uma vez que isto ocorre, a simetria não pode mais ser perdida, apesar de poder crescer em riqueza.</p>
+      <p>Conway originalmente supôs que nenhuma imagem poderia crescer ilimitadamente. Em outras palavras, qualquer configuração com um número finito de células não pode crescer além de um limite finito superior ao número de células do campo. Esta foi provavelmente a mais profunda e mais difícil questão colocada pelo jogo atualmente. Conway ofereceu um prêmio de $50 à primeira pessoa que pudesse provar a afirmação ou seu contrário antes do fim de 1970. Um caminho para provar seu contrário era ser capaz de descobrir imagens que continuassem adicionando contadores ao campo: Uma "gun" (uma configuração que constantemente atira objetos que se movimentam, como o "glider") ou um "puffer train" (uma configuração que se move mas deixa atrás uma trilha de "fumaça"). O prêmio foi ganho em Novembro do mesmo ano por um time do MIT, a configuração inicial (mostrada no topo da página) cresce como um gun, emitindo seu primeiro glider na 40a geração. A gun emite então um novo glider a cada 30 gerações.</p>
+    </div>
+    <div>
+      <h2>Exemplos de Imagem</h2>
+      <p>Existe uma série de diferentes imagens que podem ocorrer no Jogo da Vida, incluindo imagens paradas ("vidas paradas"), imagens repetitivas ("osciladores" - o conjunto de vidas paradas), e imagens que se movimentam através do tabuleiro ("naves espaciais"). Os exemplos mais simples dessas classes são mostrados abaixo, com as células vivas em preto, e as células mortas em branco.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Game_of_life_block.png">&nbsp&nbsp
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Game_of_life_boat.png">&nbsp&nbsp
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Game_of_life_blinker.png">&nbsp&nbsp
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Game_of_life_toad.png">&nbsp&nbsp
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Game_of_life_glider.png">&nbsp&nbsp
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Game_of_life_lwss.png">
+      <p>O "bloco" e o "bote" são vidas paradas, o "blinker" e o "sapo" são osciladores, e o "glider" e o "lightweight spaceship" ("LWSS") são naves espaciais que seguem seu caminho no tabuleiro conforme o tempo passa.</p>
+    </div>
+  </main>
+  <hr>
+  <footer>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/125-3_o1.gif">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/125-36_o1.gif">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/125-36_o2.gif">
+  </footer>
+</body>
+</html>
